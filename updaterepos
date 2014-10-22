@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-
+ 
 foreach $dir qw(i386 SRPMS x86_64) {
     printf("===> updating repo in $dir...\n");
     system("(cd html/$dir ; createrepo .)");
