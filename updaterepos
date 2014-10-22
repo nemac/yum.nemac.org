@@ -1,7 +1,13 @@
-#! /usr/bin/perl
+#! /bin/bash
  
-foreach $dir qw(i386 SRPMS x86_64) {
-    printf("===> updating repo in $dir...\n");
-    system("(cd html/$dir ; createrepo .)");
-    printf("===> done\n\n");
-}
+echo "===> updating repo in html/i386"
+(cd html/i386 ; createrepo .)
+echo ""
+
+echo "===> updating repo in html/SRPMS"
+(cd html/SRPMS ; createrepo .)
+echo ""
+
+echo "===> updating repo in html/x86_64"
+(cd html/x86_64 ; createrepo .)
+echo ""
